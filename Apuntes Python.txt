@@ -1,0 +1,324 @@
+-- APUNTES PYTHON --
+Python fue creado por Guido van Rossum
+
+Bibliotecas utiles para IA
+TensorFlow y Scikit-learn. 
+
+-Sintaxis
+
+Python utiliza identación
+
+if condition:
+
+    # Bloque de código si la condición es verdadera
+
+    instrucción1
+    instrucción2
+
+else:
+
+    # Bloque de código si la condición es falsa
+
+    instrucción3
+    instrucción4
+
+-Comentarios
+# Este es un comentario de una sola línea
+
+"""
+Este es un comentario
+de varias líneas
+"""
+
+-Sensibilidad a mayúsculas y minúsculas
+Como en los demas lenguajes
+
+-Punto y coma
+No se requiere pero si se deseas escribir varias 
+instrucciones en una sola línea, puedes separarlas 
+con un punto y coma. Por ejemplo:
+
+instruccion1; instruccion2; instruccion3
+
+-Uso de parentesis
+Como en los demás lenguajes
+
+-- Tipos de datos básicos --
+
+-Enteros (int)
+Los números enteros son aquellos que no tienen parte 
+decimal. En Python, se representan simplemente 
+escribiendo el número sin comillas ni puntos decimales. 
+
+Por ejemplo:
+edad = 25
+cantidad = 100
+
+-Flotantes (float)
+Los números flotantes, también conocidos como números 
+de punto flotante, son aquellos que tienen una 
+parte decimal. En Python, se representan utilizando 
+un punto para separar la parte entera de la parte decimal.
+
+Por ejemplo:
+precio = 9.99
+altura = 1.75
+
+
+-Cadenas de texto (strings)
+Las cadenas de texto, o simplemente cadenas, 
+son secuencias de caracteres encerradas 
+entre comillas simples ('...') o dobles ("...").
+Se utilizan para representar texto en Python.
+Por ejemplo:
+
+nombre = "Juan"
+mensaje = '¡Hola, mundo!'
+
+Puedes incluir caracteres especiales 
+en las cadenas utilizando el carácter de escape \.
+Por ejemplo, para incluir comillas dentro de una 
+cadena, puedes usar \' o \". También puedes utilizar
+la notación de triple comilla ('''...''' o """...""")
+para crear cadenas de varias líneas. 
+
+-Booleanos
+Los valores booleanos representan los valores de verdad:
+ True (verdadero) y False (falso). Se utilizan 
+comúnmente en expresiones condicionales y operaciones 
+lógicas. 
+Por ejemplo:
+
+es_mayor_de_edad = True
+tiene_descuento = False
+
+
+|Variable| contenedor que nos permiten almacenar y 
+manipular datos en nuestros programas
+utilizamos el operador de asignación =
+Nombre de la variable a la izquiera
+Valor a asignar a la derecha
+
+Asignar el mismo valor a varias variables
+a = b = c = 10
+
+Normas para los nombres de variables
+-Los nombres de las variables solo pueden contener 
+letras (a-z, A-Z), números (0-9) y guiones bajos (_).
+No pueden comenzar con un número.
+-No se pueden utilizar palabras clave reservadas de 
+Python como nombres de variables (por ejemplo, if, 
+else, for, while, etc.).
+-Se recomienda utilizar nombres descriptivos para
+ las variables
+-Distinción entre mayusculas y minusculas
+
+--Operadores
+
+-Aritméticos
+- (Los mismos que en otros lenguajes)
+- // División entera -se descarta la parte decimal
+- Exponenciación (**)
+- Módulo (%): devuelve el resto de la división entre
+ el primer valor y el segundo.
+
+-De comparacion
+Igual a ==
+Diferente de !=
+Mayor que >
+menor que <
+Mayor o igual que >=
+Menor o igual que <=
+
+-Lógicos 
+AND, OR, NOT
+
+
+-Precedencia de operadores
+ paréntesis, exponenciación, multiplicación/división, 
+suma/resta, operadores de comparación y operadores 
+lógicos.
+
+--Estructuras de control--
+
+-IF
+if condicion:
+
+   # Bloque de código a ejecutar si la condición es verdadera
+   instrucciones
+
+-IF-ELSE
+La estructura if-else nos permite especificar un 
+bloque de código alternativo que se ejecutará si la 
+condición del if es falsa.
+
+-IF-ELIF-ELSE
+La estructura if-elif-else nos permite especificar 
+múltiples condiciones y bloques de código alternativos
+>= 90 excelente
+
+-Bucles/loops
+Los bucles nos permiten repetir un bloque de código 
+varias veces.
+
+-For
+El bucle for se utiliza para iterar sobre una secuencia
+ (como una lista, una tupla o una cadena) o cualquier 
+objeto iterable.
+
+for variable in secuencia:
+Cuando conocemos el numero de iteraciones
+
+    # Bloque de código a repetir
+    instrucciones
+
+Ejemplo
+frutas = ["manzana", "banana", "naranja"] #Secuencia
+
+
+for fruta in frutas:
+    print(fruta)
+
+-While
+
+El bucle while se utiliza para repetir un bloque de 
+código mientras una condición sea verdadera.
+
+while condicion:
+
+    # Bloque de código a repetir
+    instrucciones
+
+-Control de bucles
+
+-Break
+La instrucción break se utiliza para salir 
+prematuramente de un bucle, independientemente de 
+la condición. Cuando se encuentra un break, el bucle
+se detiene y el flujo de ejecución continúa con la 
+siguiente instrucción fuera del bucle.
+
+contador = 0
+
+
+while True:
+
+    print(contador)
+    contador += 1
+
+
+    if contador == 5:
+        break
+
+-Continue
+La instrucción continue se utiliza para saltar 
+el resto del bloque de código dentro de un bucle 
+y pasar a la siguiente iteración
+
+for i in range(10):
+
+    if i % 2 == 0:
+        continue
+    print(i)
+En este ejemplo, el bucle for itera sobre los 
+números del 0 al 9 utilizando la función range(). 
+Dentro del bucle, se verifica si el número es 
+divisible por 2 utilizando el operador de módulo %. 
+Si el número es divisible por 2 (es decir, si es par), 
+se ejecuta la instrucción continue, lo que hace que 
+se salte el resto del bloque de código y se pase a l
+a siguiente iteración del bucle. Como resultado, 
+solo se imprimirán los números impares.
+
+-Pass
+La instrucción pass es una operación nula que no 
+hace nada. Se utiliza como marcador de posición 
+cuando se requiere una instrucción sintácticamente, 
+pero no se desea realizar ninguna acción.
+
+--Estructuras de datos: permiten organizar y 
+Nos permiten almacenar datos de manera eficiente 
+en nuestros programas
+
+|Listas:es una estructura de datos mutable y 
+ordenada que permite almacenar una colección de 
+elementos. Los elementos de una lista pueden ser 
+de diferentes tipos de datos y se encierran entre 
+corchetes [], separados por comas.
+
+Para crear una lista, simplemente encierra los elementos entre corchetes:
+
+frutas = ["manzana", "banana", "naranja"]
+
+Para acceder a los elementos de una lista, utiliza el índice del elemento entre corchetes. Los índices comienzan desde 0.
+
+print(frutas[0])  # Imprime "manzana"
+print(frutas[1])  # Imprime "banana"
+print(frutas[2])  # Imprime "naranja"
+ 
+También puedes acceder a los elementos desde el final de la lista utilizando índices negativos. El índice -1 representa el último elemento, -2 representa el penúltimo, y así sucesivamente.
+
+print(frutas[-1])  # Imprime "naranja"
+print(frutas[-2])  # Imprime "banana"
+print(frutas[-3])  # Imprime "manzana"
+
+Métodos de listas
+-append(elemento): agrega un elemento al final de la lista.
+-insert(indice, elemento): inserta un elemento en una posición específica de la lista.
+-remove(elemento): elimina la primera aparición de un elemento en la lista.
+-pop(indice): elimina y devuelve el elemento en una posición específica de la lista.
+-sort(): ordena los elementos de la lista en orden ascendente.
+-reverse(): invierte el orden de los elementos en la lista.
+
+Listas de comprensión
+Las listas de comprensión son una forma concisa de 
+crear nuevas listas basadas en una secuencia existente. 
+Permiten filtrar y transformar los elementos de una lista 
+en una sola línea de código.
+
+Listas de comprensión
+Las listas de comprensión son una forma concisa de 
+crear nuevas listas basadas en una secuencia existente. 
+Permiten filtrar y transformar los elementos de una 
+lista en una sola línea de código.
+
+nueva_lista = [expresion for elemento in secuencia if condicion]
+
+|Tuplas
+Es una estructura de datos inmutable y ordenada que 
+permite almacenar una colección de elementos. 
+Los elementos de una tupla se encierran entre 
+paréntesis (), separados por comas.
+-No se pueden modificar una vez creadas.
+-Son útiles cuando necesitas almacenar una colección de elementos 
+que no deben modificarse 
+
+Métodos de tuplas
+Aunque las tuplas son inmutables, Python proporciona varios 
+métodos útiles para trabajar con ellas:
+
+count(elemento): devuelve el número de veces que aparece un elemento en la tupla. 
+index(elemento): devuelve el índice de la primera aparición de un elemento en la tupla. Opcionalmente, se puede especificar el inicio y fin de la búsqueda. 
+len(tupla): aunque no es un método de tupla propiamente dicho, esta función incorporada devuelve la longitud de la tupla. 
+
+|Diccionario
+Un diccionario es una estructura de datos mutable y 
+no ordenada que permite almacenar pares de clave-valor. 
+Cada elemento en un diccionario consiste en una 
+clave única y su valor correspondiente. 
+Los diccionarios se encierran entre llaves {}, 
+y los pares clave-valor se separan por comas.
+
+Creación y acceso
+Para crear un diccionario, utiliza llaves y separa las claves y valores con dos puntos.
+
+persona = {"nombre": "Juan", "edad": 25, "ciudad": "Madrid"}
+
+
+Métodos de diccionarios
+Los diccionarios en Python tienen varios métodos incorporados para manipular y acceder a los elementos. Algunos métodos comunes son:
+
+keys(): devuelve una vista de todas las claves del diccionario.
+values(): devuelve una vista de todos los valores del diccionario.
+items(): devuelve una vista de todos los pares clave-valor del diccionario.
+update(otro_diccionario): actualiza el diccionario con los pares clave-valor de otro diccionario.
